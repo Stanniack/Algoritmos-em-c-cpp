@@ -1,9 +1,22 @@
 #include <stdio.h>
 
 int main () {
-    double array[6] = {1.6,2.5, -5, 25.1, 30.5, -15.2};
+    int array[] = {1,-3,2};
 
-    printf("%d", sizeof(array));
+    int r = sum_array(array, (int) sizeof(array)/sizeof(array[0]));
+
+    printf("%d", r);
+
 
     return 1;
+}
+
+int sum_array (int array[], int len) {
+
+    /* Caso base*/
+    if (len == 0)
+        return 0;
+
+    return array[len - 1] + sum_array(array, len -1);
+
 }
