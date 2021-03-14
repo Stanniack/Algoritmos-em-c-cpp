@@ -19,7 +19,6 @@ int busca_sequencial_iterativa (int elemento, int array[], int tam_array) {
 
     for (int i = 0; i < tam_array; i++) {
 
-
         if (array[i] == elemento) {
             return i;
         }
